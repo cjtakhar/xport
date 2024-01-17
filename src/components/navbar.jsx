@@ -12,7 +12,9 @@ const Navbar = () => {
 
   return (
     <nav className={`navbar ${isOpen ? 'open' : ''}`}>
-      <div className="navbar-logo">xport</div>
+      <div className="navbar-logo">
+       <Link to="/xport" className="logo-link">xport</Link>
+      </div>
       <button className="navbar-toggle" onClick={toggleNavbar}>
         <span className={`bar ${isOpen ? 'open' : ''}`}></span>
         <span className={`bar ${isOpen ? 'open' : ''}`}></span>
