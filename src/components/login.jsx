@@ -22,7 +22,9 @@ const Login = () => {
                             <input type="password" name="password" id="password" />
                         </div>
                         <div className="form-item">
-                            <button type="submit">Login</button>
+                            <button type="submit" className="submit-btn">
+                               <Link to="/member" className="submit-link">Login</Link>
+                            </button>
                         </div>
                     </form>
                     <div className="signup-container">

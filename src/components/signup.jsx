@@ -5,7 +5,7 @@ const Signup = () => {
   return (
     <div className="container-su">
         <div>
-        <Link to="/xport" className="logo">xport</Link>
+        <Link to="/xport" className="signup-logo">xport</Link>
         </div>
       <div className="create-account-container">
         <div className="create-account-form-container">
