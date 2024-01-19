@@ -1,30 +1,30 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); 
+    const [errorMessage, setErrorMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('/api/login', { email, password });
-            // Handle the response from the server
-            console.log(response.data);
+            const response = await axios.post('http://127.0.0.1:5000/api/login', { email, password });
 
-            // Check if the login was successful (you can customize this check based on your server response)
             if (response.data.success) {
-                // Redirect to the /member page if login was successful
+                // Clear any existing error message
+                setErrorMessage('');
+                // Redirect to the /member page
                 navigate('/member');
             } else {
-                // Handle unsuccessful login (e.g., show an error message)
-                console.error('Login unsuccessful');
+                // Set error message from server response or default message
+                setErrorMessage(response.data.message || 'Incorrect login information. Try again.');
             }
         } catch (error) {
-            // Handle errors
             console.error(error);
+            setErrorMessage('An error occurred. Please try again later.');
         }
     };
 
@@ -68,10 +68,14 @@ const Login = () => {
                         </button>
                     </div>
                 </div>
+                <div>
+                    {errorMessage && <div className="error-message">{errorMessage}</div>}
+                </div>
                 <div className="signup-container">
                     <p>Don't have an account?</p>
                     <Link to="/signup" className="signup-link">Sign Up</Link>
                 </div>
+                
             </div>
         </div>
     );
