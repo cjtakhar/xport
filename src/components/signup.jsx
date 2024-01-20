@@ -35,7 +35,6 @@ const Signup = () => {
       <div className="create-account-container">
         <div className="create-account-form-container">
           <h1 className="create-account-title">Join xport</h1>
-          <h2 className="create-account-subtitle">Enter info</h2>
           <form className="ca-form" onSubmit={handleSignup}>
             <div className="email-div">
               <input

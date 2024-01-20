@@ -30,9 +30,12 @@
 .login-form {
     display: flex;
     flex-direction: column;
-    border: solid 1px white;
+    border-radius: 10px;
     width: 50%;
     height: 80%;
+    margin-top: 10%;
+    padding: 1rem;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .login-title {
@@ -55,6 +58,7 @@
     border: solid 1px #000000;
     padding: 0.5rem;
     font-size: 2rem;
+    border-radius: 10px;
 }
 
 .form-item button {
@@ -63,6 +67,7 @@
     background-color: #37aec8;
     color: white;
     font-weight: bold;
+    border-radius: 10px;
 }
 
 .form-item button:hover {

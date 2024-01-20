@@ -7,8 +7,8 @@ const Home = () => {
       <div>
         <GameTime />  
         <div className="home-title">
-          <h1>title</h1>
-          <p>description</p>
+          <h1>xp</h1>
+          <p>sports</p>
         </div>
       </div>
       <div className="home-container">

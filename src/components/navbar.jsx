@@ -1,6 +1,7 @@
 // Navbar.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IoPersonCircleSharp } from "react-icons/io5";
 import '../styles/nav.css';
 
 const Navbar = () => {
@@ -13,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isOpen ? 'open' : ''}`}>
       <div className="navbar-logo">
-       <Link to="/xport" className="logo-link">xport</Link>
+       <Link to="/xport" className="logo-link">xps</Link>
       </div>
       <button className="navbar-toggle" onClick={toggleNavbar}>
         <span className={`bar ${isOpen ? 'open' : ''}`}></span>
